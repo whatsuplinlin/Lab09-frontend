@@ -6,6 +6,7 @@ import AboutView from '../views/AboutView.vue'
 import EventLayoutView from '@/views/event/EventLayoutView.vue'
 import EventDetailView from '@/views/event/EventDetailView.vue'
 import NotFoundView from '@/views/NotFoundView.vue'
+import AddEvent from '@/views/EventForm.vue'
 import NetWorkErrorView from '@/views/NetworkErrorView.vue'
 import NProgress from 'nprogress'
 import GStore from '@/store'
@@ -21,6 +22,11 @@ const routes = [
     path: '/about',
     name: 'about',
     component: AboutView
+  },
+  {
+    path: '/add-event',
+    name: 'AddEvent',
+    component: AddEvent
   },
   {
     path: '/event/:id',
