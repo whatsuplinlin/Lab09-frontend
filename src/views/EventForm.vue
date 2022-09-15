@@ -34,21 +34,6 @@
         placeholder="Location"
         class="field"
       />
-      <h3>Time & Date</h3>
-      <label>Time</label>
-      <input
-        v-model="event.time"
-        type="text"
-        placeholder="Time"
-        class="field"
-      />
-      <label>Date</label>
-      <input
-        v-model="event.date"
-        type="text"
-        placeholder="Date"
-        class="field"
-      />
       <button type="subnit">Submit</button>
     </form>
     <pre>{{ event }} </pre>
@@ -65,15 +50,13 @@ export default {
         category: '',
         title: '',
         description: '',
-        location: '',
-        time: '',
-        data: ''
+        location: ''
       }
     }
   },
   methods: {
     saveEvent() {
-      EventService.saveOrganizer(this.event)
+      EventService.saveEvent(this.event)
         .then((response) => {
           console.log(response)
           this.$router.push({
